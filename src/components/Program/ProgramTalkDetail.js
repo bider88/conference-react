@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Loader from '../common/Loader/Loader';
 
 export default class ProgramTalkDetail extends Component {
 	state = { talk: null, error: null, isLoaded: false };
@@ -17,7 +18,7 @@ export default class ProgramTalkDetail extends Component {
 
 		} else if (!isLoaded) {
 
-			return <div>Loading...</div>
+			return <Loader></Loader>;
 
 		} else {
 
