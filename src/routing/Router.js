@@ -4,6 +4,7 @@ import Header from '../components/common/Header/Header';
 import HomeIndex from '../components/Home/HomeIndex';
 import ProgramAgenda from '../components/Program/ProgramAgenda';
 import ProgramTalkDetail from '../components/Program/ProgramTalkDetail';
+import NotFound from '../components/common/NotFound/NotFound'
 
 const Router = () => {
   return (
@@ -15,7 +16,7 @@ const Router = () => {
           <Route exact path="/" component={ HomeIndex } />
           <Route exact path="/program" component={ ProgramAgenda } />
           <Route path="/program/:slug" component={ ProgramTalkDetail } />
-          {/* <Route component={ NotFoun } /> */}
+          <Route component={ NotFound } />
         </Switch>
       </div>
     </BrowserRouter>
