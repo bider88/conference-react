@@ -1,0 +1,19 @@
+:root {
+  --orange-color: #ed6009;
+  --blue-color: #5862ec;
+}
+
+.b-navigation-bar {
+  background-image: linear-gradient(271deg, var(--blue-color), var(--orange-color));
+  box-shadow: 0 2px 4 px rgba(0, 0, 0, .04);
+}
+
+.b-nav-link {
+  color: white;
+  padding: 0 15px;
+  font-weight: bold;
+}
+
+.b-nav-link:hover, .navbar-light .navbar-brand, .navbar-light .navbar-brand:hover {
+  color: white;
+}
