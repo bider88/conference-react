@@ -6322,6 +6322,9 @@ h3 {
 a {
   color: #ed6009; }
 
+.pointer {
+  cursor: pointer; }
+
 .b-navigation-bar {
   background-image: linear-gradient(271deg, #5862ec, #ed6009);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04); }

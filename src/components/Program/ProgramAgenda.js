@@ -33,6 +33,10 @@ export default class ProgramAgenda extends React.Component {
 
   }
 
+  handleClick = ( talk ) => {
+    this.props.history.push(`/program/${ talk.slug }`);
+  }
+
   render() {
 
     const { talks } = this.state;
@@ -65,7 +69,7 @@ export default class ProgramAgenda extends React.Component {
                         </div>
                         <div className="col-12 col-sm-7 col-md-7 col-lg-8 col-xl-8">
                           <span className="b-schedule-item__place text-uppercase">{talk.room.name}</span>
-                          <a href="#">
+                          <a className="pointer" onClick={ () => this.handleClick( talk ) }>
                             <h4 className="b-schedule-item__title">
                               {talk.title}
                             </h4>

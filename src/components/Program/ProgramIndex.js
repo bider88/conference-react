@@ -3,7 +3,7 @@ import ProgramAgenda from './ProgramAgenda';
 
 const ProgramIndex = () => {
   return <div>
-    <ProgramAgenda></ProgramAgenda>
+    <ProgramAgenda history={ history }></ProgramAgenda>
   </div>;
 };
 

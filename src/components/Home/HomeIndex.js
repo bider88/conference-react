@@ -1,10 +1,11 @@
 import React from 'react';
 
 const HomeIndex = () => {
-  return 
+  return (
     <div>
       Home
-    </div>;
+    </div>
+  );
 };
 
 export default HomeIndex;
