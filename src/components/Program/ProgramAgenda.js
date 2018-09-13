@@ -1,4 +1,6 @@
 import React from 'react';
+import FixImageUtils from '../../helpers/FixImageUtils';
+import API from '../../config/API';
 
 // Stateful react component (class)
 export default class ProgramAgenda extends React.Component {
@@ -16,7 +18,7 @@ export default class ProgramAgenda extends React.Component {
   componentDidMount() {
     console.log('componentDidMount');
 
-    const url = 'http://conference.webtraining.fun/api/talks';
+    const url = `${ API.serverURL }/talks`;
 
     fetch(url)
       .then(response => response.json())
@@ -65,7 +67,7 @@ export default class ProgramAgenda extends React.Component {
                     <div className="b-schedule-item-body">
                       <div className="row">
                         <div className="col-12 col-sm-7 col-md-5 col-lg-4 col-xl-4">
-                          <img src={talk.thumbnail} alt={talk.speaker.name} className="img-fluid rounded" />
+                          <img src={ FixImageUtils.fixImageURL( talk.thumbnail ) } alt={talk.speaker.name} className="img-fluid rounded" />
                         </div>
                         <div className="col-12 col-sm-7 col-md-7 col-lg-8 col-xl-8">
                           <span className="b-schedule-item__place text-uppercase">{talk.room.name}</span>

@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import Loader from '../common/Loader/Loader';
+import API from '../../config/API';
+import FixImageUtils from '../../helpers/FixImageUtils';
 
 export default class ProgramTalkDetail extends Component {
 	state = { talk: null, error: null, isLoaded: false };
@@ -30,7 +32,7 @@ export default class ProgramTalkDetail extends Component {
 							<div className="row">
 								<div className="col-12 col-sm-12 col-md-4 col-lg-3 col-xl-3">
 									<div className="b-talk__image pt-5">
-										<img src={talk.image} alt="Let's continue doing business"
+										<img src={ FixImageUtils.fixImageURL( talk.image ) } alt="Let's continue doing business"
 											className="img-fluid img-thumbnail" />
 									</div>
 								</div>
@@ -77,7 +79,7 @@ export default class ProgramTalkDetail extends Component {
 		console.log('componentDidMount');
 
 		const { slug } = this.props.match.params;
-		const url = `http://conference.webtraining.fun/api/talks/${ slug }`;
+		const url = `${ API.serverURL }/talks/${ slug }`;
 
 		fetch(url)
 			.then(response => response.json())
