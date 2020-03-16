@@ -52,7 +52,7 @@ export default class ProgramTalkDetail extends Component {
 
 					<section className="b-section b-section--highlighted">
 						<span className="b-talk__time text-center d-block p-3">
-							Hora
+							<b>Inicia</b> {talk.starts_at} / <b>Finaliza</b> {talk.ends_at}
             </span>
 					</section>
 
